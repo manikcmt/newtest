@@ -17,14 +17,23 @@ load_dotenv()
 #     database=os.getenv("DB_NAME", "crud_db"),
 # )
 
+# DATABASE_URL = URL.create(
+#     drivername="postgresql+psycopg2",
+#     username=os.getenv("DB_USER", "training_40s1_user"),
+#     password=os.getenv("DB_PASSWORD", "EFWXlQkOW12BCY9k3xuwnsgbMjIkOgdJ"),
+#     host=os.getenv("DB_HOST", "dpg-dbbfh8gm7kps73eqclv0-a.oregon-postgres.render.com"),
+#     port=int(os.getenv("DB_PORT", "5432")),
+#     database=os.getenv("DB_NAME", "training_40s1"),
+# )
 DATABASE_URL = URL.create(
     drivername="postgresql+psycopg2",
     username=os.getenv("DB_USER", "training_40s1_user"),
     password=os.getenv("DB_PASSWORD", "EFWXlQkOW12BCY9k3xuwnsgbMjIkOgdJ"),
-    host=os.getenv("DB_HOST", "dpg-dbbfh8gm7kps73eqclv0-a.oregon-postgres.render.com"),
+    host=os.getenv("DB_HOST", "dpg-dbbfh9rbc2fs73b19o4g-a.virginia-postgres.render.com"),
     port=int(os.getenv("DB_PORT", "5432")),
     database=os.getenv("DB_NAME", "training_40s1"),
 )
+
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
