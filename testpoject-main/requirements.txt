@@ -1,8 +1,8 @@
-fastapi>=0.110,<1.0
-uvicorn>=0.29,<1.0
-SQLAlchemy>=2.0,<3.0
-PyMySQL>=1.1,<2.0
+fastapi
+uvicorn
+SQLAlchemy
+PyMySQL
 psycopg2-binary
 pydantic
-python-dotenv>=1.0,<2.0
-email-validator>=2.0,<3.0
+python-dotenv
+email-validator
