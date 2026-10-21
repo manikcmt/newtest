@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple User CRUD</title>
+    <link rel="stylesheet" href="/static/styles.css?v=5">
+    <script src="/static/app.js?v=5" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+        <p>Simple FastAPI, MySQL and JavaScript project.</p>
+
+        <h2 id="form-title">Add User</h2>
+        <form id="user-form">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter name" maxlength="100" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter email" maxlength="255" required>
+
+            <label for="age">Age</label>
+            <input id="age" type="number" placeholder="Enter age" min="0" max="120" step="1" required>
+
+            <button type="submit" id="save-button">Add User</button>
+            <button type="button" id="cancel-button" hidden>Cancel</button>
+        </form>
+        <p id="message" role="status" aria-live="polite"></p>
+
+        <h2>Users</h2>
+        <table>
+            <thead>
+                <tr><th>ID</th><th>Name</th><th>Email</th><th>Age</th><th>Action</th></tr>
+            </thead>
+            <tbody id="user-list">
+                <tr><td colspan="5">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
